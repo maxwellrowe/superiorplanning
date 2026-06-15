@@ -4,7 +4,7 @@
 			<div class="py-5">
 				<?php if ( have_posts() ) : ?>
 					<?php while ( have_posts() ) : the_post(); ?>
-						<h1 class="display-5 text-uppercase fw-bold text-center mb-4"><?php the_title(); ?></h1>
+						<h1 class="display-5 text-uppercase fw-bold text-center mb-4 page-title"><?php the_title(); ?></h1>
 						<?php
 							$page_id = get_the_ID();
 							$use_beaver_builder_content = false;
