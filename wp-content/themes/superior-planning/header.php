@@ -40,6 +40,7 @@
       </div>
     </div>
   </header>
+  <?php /* REMOVED JUNE 2026
   <?php if ( ! is_page_template( 'page-home.php' ) ) { ?>
     <div class="header-subnav">
       <div class="container-fluid">
@@ -64,3 +65,4 @@
       </div>
     </div>
   <?php } ?>
+  */ ?>
