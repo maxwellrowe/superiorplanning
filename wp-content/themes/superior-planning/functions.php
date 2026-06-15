@@ -2,6 +2,9 @@
 // Scripts and CSS
 // Scripts and CSS
 function superior_planning_enqueue_scripts() {
+  // WordPress Dashicons for icon picker output on the front end
+  wp_enqueue_style('dashicons');
+
   // Google Fonts: Bai Jamjuree
   wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600;700&display=swap', false);
 
@@ -15,7 +18,15 @@ function superior_planning_enqueue_scripts() {
   wp_enqueue_style('swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
 
   // Theme CSS
-  wp_enqueue_style('theme-style', get_stylesheet_uri(), [], '1.9');
+  $theme_css_path = get_stylesheet_directory() . '/style.css';
+  $theme_css_ver  = file_exists($theme_css_path) ? filemtime($theme_css_path) : null;
+  
+  wp_enqueue_style(
+      'theme-style',
+      get_stylesheet_uri(),
+      [],
+      $theme_css_ver
+  );
   
   // jQuery (bundled with WP)
   wp_enqueue_script('jquery');
@@ -50,6 +61,14 @@ function superior_planning_setup() {
   // Enable featured images (post thumbnails)
   add_theme_support('post-thumbnails');
 
+  // ✅ Enable Menus
+  add_theme_support('menus');
+
+  // ✅ Register menu locations
+  register_nav_menus([
+    'primary' => __('Primary Menu', 'superior-planning'),
+  ]);
+
   // Support HTML5 markup for various components
   add_theme_support('html5', [
     'search-form',
@@ -72,8 +91,8 @@ function superior_planning_setup() {
 
   // Enable editor styles (optional if using a style guide in Gutenberg)
   add_theme_support('editor-styles');
-  add_editor_style('editor-style.css'); // Optional: Add a backend editor stylesheet
-    
+  add_editor_style('editor-style.css');
+
   add_theme_support('responsive-embeds');
 }
 add_action('after_setup_theme', 'superior_planning_setup');

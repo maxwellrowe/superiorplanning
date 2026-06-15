@@ -60,6 +60,17 @@ body {
 .btn-outline-dark {
   border-color: var(--bs-secondary) !important; 
 }
+.text-small {
+  font-size: 0.875rem;
+  line-height: 120%;
+}
+#wm-section .btn-outline-light,
+#wm-section .btn-outline-dark {
+  color: #fff; 
+}
+#wm-section .btn-outline-light:hover {
+  background-color: #212529; 
+}
 .btn span.fa-sharp {
   transition: all .2s ease-in-out; 
 }
@@ -110,6 +121,65 @@ p {
 .sp-image .image-caption {
   display: block;
   margin-top: .5rem; 
+}
+
+.sp-accordion .accordion-item {
+  border-radius: 0;
+  border-color: var(--sp-medium-gray);
+}
+.sp-accordion .accordion-button {
+  font-size: 1.25rem;
+  font-weight: 700;
+  background-color: var(--bs-light);
+  color: var(--bs-body-color);
+  box-shadow: none !important;
+}
+.sp-accordion .accordion-button:not(.collapsed) {
+  background-color: var(--sp-medium-gray);
+  color: var(--bs-body-color);
+}
+.sp-accordion .accordion-body > :last-child,
+.sp-icon-text-text > :last-child {
+  margin-bottom: 0;
+}
+
+.sp-table table {
+  margin-bottom: 0;
+}
+
+.sp-icon-text-icon {
+  flex: 0 0 auto;
+  line-height: 1;
+}
+.sp-icon-text-icon-small {
+  font-size: 1.5rem;
+  width: 1.5rem;
+}
+.sp-icon-text-icon-normal {
+  font-size: 2.25rem;
+  width: 2.25rem;
+}
+.sp-icon-text-icon-large {
+  font-size: 3rem;
+  width: 3rem;
+}
+.sp-icon-text-icon-xl {
+  font-size: 4rem;
+  width: 4rem;
+}
+.sp-icon-text-icon img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+.sp-icon-text-icon .dashicons {
+  font-size: inherit;
+  width: 1em;
+  height: 1em;
+}
+.sp-icon-text-text {
+  flex: 1 1 auto;
 }
 
 .sp-image a:not(.btn):after {
@@ -597,4 +667,3 @@ body.wm-shown #fs-section {
 }
 
 /* Disclosures Show */
-
