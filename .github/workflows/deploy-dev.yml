@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Deploy theme to WP Engine development
         uses: wpengine/github-action-wpe-site-deploy@v3
