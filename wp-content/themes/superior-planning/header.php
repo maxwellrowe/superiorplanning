@@ -6,6 +6,7 @@
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+  <?php wp_body_open(); ?>
   <header id="header" class="bg-light d-flex justify-content-center align-items-center">
     <div class="container-xxl">
       <div class="row align-items-center">
