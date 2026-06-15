@@ -3,7 +3,7 @@ name: Deploy Theme to WP Engine Dev
 on:
   push:
     branches:
-      - dev
+      - main
 
 jobs:
   deploy:
