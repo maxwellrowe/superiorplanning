@@ -1,0 +1,25 @@
+name: Deploy Theme to WP Engine Dev
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Deploy theme to WP Engine development
+        uses: wpengine/github-action-wpe-site-deploy@v3
+        with:
+          WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPE_SSHG_KEY_PRIVATE }}
+          WPE_ENV: ${{ secrets.WPE_ENV }}
+          SRC_PATH: "wp-content/themes/superior-planning/"
+          REMOTE_PATH: "wp-content/themes/superior-planning/"
+          PHP_LINT: TRUE
+          CACHE_CLEAR: TRUE
+          FLAGS: "-azvr --inplace --delete --exclude=.* --exclude-from=.deployignore"
