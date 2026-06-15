@@ -100,6 +100,3 @@ add_action('after_setup_theme', 'superior_planning_setup');
 
 // Content Builder Include
 require_once get_template_directory() . '/content-builder/content-builder.php';
-
-// Hide Admin Bar
-add_filter('show_admin_bar', '__return_false');
