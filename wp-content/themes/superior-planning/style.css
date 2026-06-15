@@ -242,7 +242,7 @@ a:not(.btn):hover:after {
 /* Header */
 header#header {
  position: relative;
- z-index: 2; 
+ z-index: 9999; 
  height: 6.5rem;
 }
 header#header a:hover {
