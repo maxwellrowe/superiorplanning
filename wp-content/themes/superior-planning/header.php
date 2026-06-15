@@ -7,7 +7,7 @@
 </head>
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
-  <header id="header" class="bg-light d-flex justify-content-center align-items-center">
+  <header id="header" class="bg-light d-flex justify-content-center align-items-center shadow-sm">
     <div class="container-xxl">
       <div class="row align-items-center">
         <div class="col-4 col-lg-3 text-start">
