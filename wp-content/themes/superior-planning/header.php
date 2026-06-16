@@ -21,7 +21,7 @@
             wp_nav_menu([
               'theme_location'  => 'primary',
               'container'       => 'nav',
-              'container_class' => 'primary-nav d-inline-block',
+              'container_class' => 'primary-nav d-none d-md-inline-block',
               'menu_class'      => 'nav justify-content-end align-items-center gap-4 lh-1 text-center',
               'fallback_cb'     => false,
               'depth'           => 2,
