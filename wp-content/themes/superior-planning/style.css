@@ -219,6 +219,9 @@ a:not(.btn):not(.header-subnav-fs):not(.header-subnav-wm):after {
   bottom: -2px;
   transition: all .2s ease-in-out;
 }
+.fl-callout-content a:not(.btn):after {
+  display: none;
+}
 a:not(.btn):hover:after {
  border-color: var(--bs-secondary); 
 }
