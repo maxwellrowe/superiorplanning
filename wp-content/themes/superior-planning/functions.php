@@ -57,7 +57,7 @@ function superior_planning_enqueue_scripts() {
     wp_enqueue_script('swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', [], null, true);
 
     // Your custom script.js with jQuery dependency
-    wp_enqueue_script('theme-script', get_template_directory_uri() . '/scripts.js', ['jquery'], '1.7', true);
+    wp_enqueue_script('theme-script', get_template_directory_uri() . '/scripts.js', ['jquery'], '1.8', true);
   }
 
   // Font Awesome Kit (in head)
