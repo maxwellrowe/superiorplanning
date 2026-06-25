@@ -6,13 +6,6 @@ jQuery(document).ready(function() {
 	});
 });
 
-jQuery(document).ready(function() {
-	jQuery('.match-height-row').matchHeight({
-		byRow: true,
-		property: 'min-height'
-	});
-});
-
 // Function to handle hash on load or change
 function handleHash() {
 	const hash = window.location.hash;
