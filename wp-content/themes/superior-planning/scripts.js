@@ -6,13 +6,6 @@ jQuery(document).ready(function() {
 	});
 });
 
-jQuery(window).load(function() {
-	jQuery('.match-height-row .fl-module-content').matchHeight({	
-		byRow: true,
-		property: 'min-height'
-	});
-});
-
 // Function to handle hash on load or change
 function handleHash() {
 	const hash = window.location.hash;
